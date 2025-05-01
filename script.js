@@ -4,8 +4,6 @@ let pokemon_Image = document.querySelector('.pokemonImage')
 let pokemon_Abilities = document.querySelector('.pokemonabilities')
 let input = document.querySelector('.searchbar')
 
-
-
 function searchPokemon() {
     axios.get(apiUrl + input.value)
     .then(function(response) {
@@ -20,7 +18,6 @@ function searchPokemon() {
                 abilitiesText += " • ";
             }
         }
-        
         pokemon_Abilities.innerHTML = "Abilities: " + abilitiesText;
     })
     .catch(function(error) {
